@@ -1,50 +1,94 @@
-# Welcome to your Expo app 👋
+# Tetris Expo
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A modern implementation of the classic Tetris game built with React Native and Expo.
 
-## Get started
+## Features
 
-1. Install dependencies
+- Complete Tetris gameplay mechanics
+- Responsive touch controls
+  - Tap to move left/right
+  - Double-tap to rotate
+  - Swipe down for hard drop
+- Next piece preview
+- Score tracking and high score
+- Level progression with increasing speed
+- Line clearing with scoring system
+- Game statistics (score, level, lines cleared)
+- Modern blue gradient UI
 
-   ```bash
-   npm install
-   ```
+## Controls
 
-2. Start the app
+- **Move Left/Right**: Tap on the left/right side of the game board
+- **Rotate Piece**: Double-tap anywhere on the board
+- **Hard Drop**: Swipe down on the game board
+- **Pause/Resume**: Tap the pause button
+- **Reset Game**: Tap the reset button
+- **Quit Game**: Tap the quit button
 
-   ```bash
-   npx expo start
-   ```
+## Technical Implementation
 
-In the output, you'll find options to open the app in a
+- Built with React Native and Expo
+- Uses React hooks for state management
+- Custom game loop implementation
+- Touch gesture handling with PanResponder
+- Responsive design that works across different screen sizes
+- Linear gradient backgrounds for visual appeal
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Game Mechanics
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- Standard Tetris rules
+- Seven classic tetromino shapes (I, J, L, O, S, T, Z)
+- Level increases every 10 lines cleared
+- Game speed increases with each level
+- Score calculation based on:
+  - Single line: 40 × level
+  - Double line: 100 × level
+  - Triple line: 300 × level
+  - Tetris (4 lines): 1200 × level
 
-## Get a fresh project
+## Installation
 
-When you're ready, run:
-
-```bash
-npm run reset-project
+1. Make sure you have Node.js and npm installed
+2. Install Expo CLI globally:
 ```
+npm install -g expo-cli
+```
+3. Clone the repository:
+```
+git clone https://github.com/yourusername/tetris-expo.git
+cd tetris-expo
+```
+4. Install dependencies:
+```
+npm install
+```
+5. Start the Expo development server:
+```
+npx expo start
+```
+6. Use the Expo Go app on your mobile device to scan the QR code, or run on a simulator
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Dependencies
 
-## Learn more
+- React Native
+- Expo
+- expo-linear-gradient
+- @expo/vector-icons
+- expo-router
 
-To learn more about developing your project with Expo, look at the following resources:
+## Future Improvements
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+- Add sound effects and background music
+- Implement local storage for persistent high scores
+- Add different game themes
+- Add a settings screen for customization
+- Implement a leaderboard feature
+- Add haptic feedback for interactions
 
-## Join the community
+## License
 
-Join our community of developers creating universal apps.
+MIT
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Credits
+
+Created by Byron Gomez Jr @byrongomezjr, byrongomezjr@pm.me
